@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="user1" class="com.liang.pojo.User">
+        <property name="id" value="1"/>
+        <property name="name" value="小王"/>
+    </bean>
+    <!-- 1.用有参构造来创建bean:index  -->
+    <bean id="user2" class="com.liang.pojo.User">
+        <constructor-arg index="0" value="2"/>
+        <constructor-arg index="1" value="小张"/>
+    </bean>
+    <!-- 2.用有参构造来创建bean:type -->
+    <bean id="user3" class="com.liang.pojo.User">
+        <constructor-arg type="int" value="3"/>
+        <constructor-arg type="java.lang.String" value="小李"/>
+    </bean>
+    <!-- 3.用有参构造来创建bean:name -->
+    <!--name表示别名，可以有多个别名，别名之间用“，”，“ ”等分隔。-->
+    <bean id="user4" name="u4 u5" class="com.liang.pojo.User">
+        <constructor-arg name="id" value="4"/>
+        <constructor-arg name="name" value="小刘"/>
+    </bean>
+    <alias name="user4" alias="I am user4"/>
+</beans>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+    <!-- 先导入context上下文约束 -->
+    <!-- 开启注解的支持 -->
+    <context:annotation-config></context:annotation-config>
+    <context:component-scan base-package="com.liang"/>
+<!--    <bean id="cat" class="com.liang.Cat"/>-->
+    <bean id="dog" class="com.liang.Dog"/>
+<!--    <bean id="people" class="com.liang.People"/>-->
+    <!-- 不用注解 -->
+<!--    <bean id="cat" class="com.liang.Cat"/>-->
+<!--    <bean id="dog" class="com.liang.Dog"/>-->
+<!--    <bean id="people" class="com.liang.People" autowire="byName">-->
+<!--        <property name="name" value="小明"/>-->
+<!--        <property name="dog" ref="dog"/>-->
+<!--        <property name="cat" ref="cat"/>-->
+<!--    </bean>-->
+
+</beans>
